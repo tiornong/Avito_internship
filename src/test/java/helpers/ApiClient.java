@@ -1,11 +1,10 @@
 package helpers;
 
-
 import config.ApiConstants;
 import io.qameta.allure.Step;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.response.ValidatableResponse;
-import model.Item;
+import model.ItemToSend;
 
 import static io.restassured.RestAssured.given;
 
@@ -13,7 +12,7 @@ import static io.restassured.RestAssured.given;
 public class ApiClient {
 
     @Step("Клиент - создание товара")
-    public ValidatableResponse createItem(Item item) {
+    public ValidatableResponse createItem(ItemToSend item) {
         return given()
                 .filter(new AllureRestAssured())
                 .header("Content-Type", "application/json")
