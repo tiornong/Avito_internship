@@ -95,7 +95,7 @@ public class GetItemByIdEndpointNegativeCasesTest {
         ApiClient client = new ApiClient();
 
         Faker faker = new Faker();
-        String replacementChar = faker.regexify("[!@#$%^&*()_+\\-=\\[\\]{};':\",.<>/?]{1}");
+        String replacementChar = faker.regexify("[({}|\\^<>`%]{1}");
         String itemId = UUID.randomUUID().toString().replaceAll(".$", replacementChar);
         ValidatableResponse response = client.getItemById(itemId);
 

@@ -8,6 +8,7 @@ import org.junit.Test;
 
 import static config.ApiConstants.TEST_SELLER_ID;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static org.apache.http.HttpStatus.SC_OK;
 
 @DisplayName("Позитивные тесты получения информации обо всех товарах продавца по его ID")
 public class GetItemListBySellerIdEndpointPositiveCasesTest {
@@ -21,7 +22,7 @@ public class GetItemListBySellerIdEndpointPositiveCasesTest {
         ValidatableResponse response = client.getItemsListBySellerId(TEST_SELLER_ID.toString());
 
         response.assertThat()
-                .statusCode(200)
+                .statusCode(SC_OK)
                 .body(matchesJsonSchemaInClasspath("schemas/items-info.json"));
 
     }

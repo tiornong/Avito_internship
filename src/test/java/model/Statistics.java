@@ -9,8 +9,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Statistics {
 
-    private int contacts;
-    private int likes;
-    private int viewCount;
+    // Object используется т.к. в ином случае было бы необходимо создавать отдельный класс 1
+    // (например, CorruptedStatistics) для негативных тестов, в которых мы пытаемся создать заказ с значениями неправильных типов
+    private Object contacts;
+    private Object likes;
+    private Object viewCount;
 
 }

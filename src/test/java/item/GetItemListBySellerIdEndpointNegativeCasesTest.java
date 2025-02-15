@@ -48,7 +48,7 @@ public class GetItemListBySellerIdEndpointNegativeCasesTest {
     @Description("Попытка получить данные по некорректному sellerID (содержит спецсимволы)")
     public void specialCharSellerIdTest(){
         Faker faker = new Faker();
-        String replacementChar = faker.regexify("[!@#$%^&*()_+\\-=\\[\\]{};':\",.<>/?]{1}");
+        String replacementChar = faker.regexify("[({}|\\^<>`%]{1}");
         String sellerId = TEST_SELLER_ID.toString().replaceAll(".$", replacementChar);
 
         ApiClient client = new ApiClient();
