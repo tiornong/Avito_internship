@@ -1,6 +1,6 @@
 package config;
 
-
+/** Класс для хранения констант, связанных непосредственно с API.*/
 public class ApiConstants {
 
     public static final String TEST_URI = "https://qa-internship.avito.com";
