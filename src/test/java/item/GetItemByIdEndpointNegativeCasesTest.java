@@ -14,6 +14,7 @@ import java.util.UUID;
 import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 
+@DisplayName("Негативныетесты получения информации о заказе через его ID")
 public class GetItemByIdEndpointNegativeCasesTest {
 
     @Test
@@ -73,7 +74,7 @@ public class GetItemByIdEndpointNegativeCasesTest {
     }
 
     @Test
-    @DisplayName("Некорректная структура ID товара")
+    @DisplayName("Передача некорректной структуры ID товара")
     @Description("Проверка кода ответа при передаче ID товара с не соблюдённой структурой UUID")
     public void brokenStructureIdTest(){
         ApiClient client = new ApiClient();
@@ -81,8 +82,9 @@ public class GetItemByIdEndpointNegativeCasesTest {
         String itemId = UUID.randomUUID().toString().replaceAll("-", "");
         ValidatableResponse response = client.getItemById(itemId);
 
+        // Автоматически структура ответа правится, но заказ найти не должно
         response.assertThat()
-                .statusCode(SC_BAD_REQUEST);
+                .statusCode(SC_NOT_FOUND);
 
     }
 

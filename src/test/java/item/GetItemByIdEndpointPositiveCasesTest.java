@@ -20,7 +20,7 @@ import static org.apache.http.HttpStatus.SC_OK;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-@DisplayName("Тесты получения информации о заказе через его ID")
+@DisplayName("Позитивные тесты получения информации о заказе через его ID")
 public class GetItemByIdEndpointPositiveCasesTest {
 
     private String itemId;
