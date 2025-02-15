@@ -37,7 +37,7 @@ public class ApiClient {
                 .then();
     }
 
-    @Step
+    @Step("Клиент - получение статистики товара")
     public ValidatableResponse getItemStatistic(String itemId) {
         return given()
                 .filter(new AllureRestAssured())

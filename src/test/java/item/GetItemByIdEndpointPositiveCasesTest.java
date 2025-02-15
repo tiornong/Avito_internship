@@ -56,7 +56,7 @@ public class GetItemByIdEndpointPositiveCasesTest {
 
     @Test
     @DisplayName("Базовый позитивный кейс")
-    @Description("Базовый позитивный кейс -- проверка того, что данные приходят, код корректный и структура данных соответствует ожидаемой")
+    @Description("Базовый позитивный кейс -- проверка того, что данные приходят, код и структура ответа корректны")
     public void basicCaseTest(){
 
         ApiClient client = new ApiClient();

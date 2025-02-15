@@ -14,7 +14,7 @@ import java.util.UUID;
 import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 
-@DisplayName("Негативныетесты получения информации о заказе через его ID")
+@DisplayName("Негативные тесты получения информации о заказе через его ID")
 public class GetItemByIdEndpointNegativeCasesTest {
 
     @Test
@@ -133,16 +133,4 @@ public class GetItemByIdEndpointNegativeCasesTest {
                 .statusCode(SC_BAD_REQUEST);
     }
 
-   //@Test
-   //@DisplayName("")
-   //@Description("")
-   //public void Test(){
-   //    ApiClient client = new ApiClient();
-   //
-   //    String itemId = UUID.randomUUID().toString();
-   //    ValidatableResponse response = client.getItemById(itemId);
-   //
-   //    response.assertThat()
-   //            .statusCode(SC_BAD_REQUEST);
-   //}
 }
