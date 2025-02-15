@@ -114,7 +114,7 @@ public class GetItemByIdEndpointPositiveCasesTest {
 
     @Test
     @DisplayName("Параметр statistics")
-    @Description("Проверка того, что приходящее нам значение параметра sellerId соответствует тому, который мы отправили.")
+    @Description("Проверка того, что приходящее нам значение параметра statistics соответствует тому, который мы отправили.")
     public void statisticsTest(){
 
         ApiClient client = new ApiClient();
