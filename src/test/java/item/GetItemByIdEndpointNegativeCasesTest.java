@@ -14,7 +14,7 @@ import java.util.UUID;
 import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
 import static org.apache.http.HttpStatus.SC_NOT_FOUND;
 
-@DisplayName("Негативные тесты получения информации о заказе через его ID")
+@DisplayName("Негативные тесты получения информации о товаре через его ID")
 public class GetItemByIdEndpointNegativeCasesTest {
 
     @Test
