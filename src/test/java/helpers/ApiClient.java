@@ -33,7 +33,8 @@ public class ApiClient {
     public ValidatableResponse getItemsListBySellerId(String sellerId) {
         return given()
                 .filter(new AllureRestAssured())
-                .get(ApiConstants.SELLER_TEST_URL + "/" + sellerId + "/item")
+                // replace используется на случай пустострокового sellerID
+                .get(ApiConstants.SELLER_TEST_URL + ("/" + sellerId + "/item").replaceAll("//", "/"))
                 .then();
     }
 

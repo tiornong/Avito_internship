@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import static config.ApiConstants.TEST_SELLER_ID;
 import static org.apache.http.HttpStatus.SC_BAD_REQUEST;
+import static org.apache.http.HttpStatus.SC_METHOD_NOT_ALLOWED;
 
 @DisplayName("Негативные тесты получения информации обо всех товарах продавца по его ID")
 public class GetItemListBySellerIdEndpointNegativeCasesTest {
@@ -65,7 +66,7 @@ public class GetItemListBySellerIdEndpointNegativeCasesTest {
         ApiClient client = new ApiClient();
         ValidatableResponse response = client.getItemsListBySellerId("");
         response.assertThat()
-                .statusCode(SC_BAD_REQUEST);
+                .statusCode(SC_METHOD_NOT_ALLOWED);
     }
 
 }

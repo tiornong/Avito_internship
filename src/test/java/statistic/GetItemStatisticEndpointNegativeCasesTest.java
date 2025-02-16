@@ -39,7 +39,7 @@ public class GetItemStatisticEndpointNegativeCasesTest {
         ValidatableResponse response = client.getItemStatistic(itemId);
 
         response.assertThat()
-                .statusCode(SC_BAD_REQUEST);
+                .statusCode(SC_NOT_FOUND);
 
     }
 

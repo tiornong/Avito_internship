@@ -44,7 +44,7 @@ public class PostItemEndpointBaseTest {
     @Test
     @DisplayName("Базовый позитивный тест")
     @Description("Базовый кейс -- проверка работы ручки при всех корректных параметрах, корректности кода ответа и корректности структуры тела ответа.")
-    public void Test(){
+    public void baseTest(){
         ItemToSend item = new ItemToSend(ApiConstants.TEST_SELLER_ID, name, price, statistics);
         ApiClient client = new ApiClient();
         ValidatableResponse response = client.createItem(item);
