@@ -1,4 +1,4 @@
-package item;
+package item.postitem;
 
 import config.ApiConstants;
 import helpers.ApiClient;
@@ -17,7 +17,7 @@ import java.util.Random;
 import static org.apache.http.HttpStatus.SC_CREATED;
 
 @DisplayName("Тесты создания товара")
-public class PostItemEndpointTest {
+public class PostItemEndpointBaseTest {
 
     private String name;
     private int price;
@@ -41,16 +41,6 @@ public class PostItemEndpointTest {
 
     }
 
-    //@Test
-    //@DisplayName("")
-    //@Description("")
-    //public void Test(){
-    //    ItemToSend item = new ItemToSend(ApiConstants.TEST_SELLER_ID, name, price, statistics);
-    //    ApiClient client = new ApiClient();
-    //    ValidatableResponse response = client.createItem(item);
-    //    response.assertThat()
-    //}
-
     @Test
     @DisplayName("Базовый позитивный тест")
     @Description("Базовый кейс -- проверка работы ручки при всех корректных параметрах, корректности кода ответа и корректности структуры тела ответа.")
@@ -61,5 +51,6 @@ public class PostItemEndpointTest {
         response.assertThat().statusCode(SC_CREATED);
     }
 
-    //TODO: остальные тесты
+
+
 }

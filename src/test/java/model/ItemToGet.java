@@ -10,10 +10,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ItemToGet {
-    private String createdAt;
-    private String id;
-    private String name;
-    private int price;
-    private long sellerId;
-    private Statistics statistics;
+    private String      createdAt;
+    private String      id;
+    private String      name;
+    private int         price;
+    private long        sellerId;
+    private Statistics  statistics;
 }

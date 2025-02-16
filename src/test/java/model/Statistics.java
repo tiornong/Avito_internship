@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Statistics {
 
-    // Object используется т.к. в ином случае было бы необходимо создавать отдельный класс 1
+    // Object используется т.к. в ином случае было бы необходимо создавать отдельный класс
     // (например, CorruptedStatistics) для негативных тестов, в которых мы пытаемся создать заказ с значениями неправильных типов
     private Object contacts;
     private Object likes;

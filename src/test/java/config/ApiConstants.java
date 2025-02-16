@@ -9,4 +9,9 @@ public class ApiConstants {
     public static final String SELLER_TEST_URL = TEST_URI + "/api/1";
     public static final Integer TEST_SELLER_ID = 159164;
 
+    public static final String  TEST_NAME = "Тимофей";
+    public static final Integer TEST_PRICE = 1234;
+    public static final Integer TEST_CONTACTS = 100;
+    public static final Integer TEST_LIKES = TEST_CONTACTS;
+    public static final Integer TEST_VIEWCOUNT = TEST_CONTACTS;
 }
