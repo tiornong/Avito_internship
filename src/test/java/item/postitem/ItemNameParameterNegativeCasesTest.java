@@ -27,8 +27,8 @@ public class ItemNameParameterNegativeCasesTest {
     @Parameterized.Parameters(name = "Проверяем имя -- {0}")
     public static Object[][] testData() {
         return new Object[][] {
-                {"Тим#фей"},
-                {"Тим0фей"},
+                {"Ма#ина"},
+                {"Машин4"},
                 {""},
         };
     }

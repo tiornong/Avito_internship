@@ -39,11 +39,11 @@ public class GetItemByIdEndpointPositiveCasesTest {
         Faker faker = new Faker(new Random(seed));
 
         this.name = faker.lorem().characters(10);
-        this.price = new Random().nextInt(100);
+        this.price = new Random().nextInt(10000);
 
-        int contacts = new Random().nextInt(100);
-        int likes = new Random().nextInt(100);
-        int viewCount = new Random().nextInt(100);
+        int contacts = new Random().nextInt(10000);
+        int likes = new Random().nextInt(10000);
+        int viewCount = new Random().nextInt(10000);
         this.statistics = new Statistics(contacts, likes, viewCount);
 
         // Создаём рандомизированный товар
