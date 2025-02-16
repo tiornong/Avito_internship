@@ -4,15 +4,19 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import static config.ApiConstants.*;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Statistics {
 
-    // Object используется т.к. в ином случае было бы необходимо создавать отдельный класс
-    // (например, CorruptedStatistics) для негативных тестов, в которых мы пытаемся создать заказ с значениями неправильных типов
-    private Object contacts;
-    private Object likes;
-    private Object viewCount;
+    private Integer contacts;
+    private Integer likes;
+    private Integer viewCount;
+
+    public static Statistics get() {
+        return new Statistics(TEST_CONTACTS, TEST_LIKES, TEST_VIEWCOUNT);
+    }
 
 }
